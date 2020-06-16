@@ -16,18 +16,27 @@ function calculaTiempo(){
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],    // portal 5
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 6
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 7
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 8
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 9
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 10
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]            // portal 11
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 8  VER ÑAPA ABAJO
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 9  VER ÑAPA ABAJO
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 10 VER ÑAPA ABAJO
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]            // portal 11 VER ÑAPA ABAJO
         ];
+        // TODO: se debe hacer una conversión del option de entrada a la matriz de propietarios  (conversión a hacer)
+        // Hacemos una pequeña ÑAPA, para adaptarlo a los índices de la matriz de propietarios
+        if (portal >= 8 && portal <= 11) {
+            if (piso == 11) {
+                piso = 9;
+            }
+            if (piso == 12) {
+                piso = 10;
+            }
+        }
         // datos de 2020
         var añoActual = 2020
         var portalPresidente = 10;
         var portalVicePresidente = 1;
         var mesCargo = 'enero del '
 
-        // TODO: se debe hacer una conversión del option de entrada a la matriz de propietarios
         var vocales = [
         11,    // portal 1  AticoA (vicepresidente) -
         5,     // portal 2  3A -
@@ -36,10 +45,10 @@ function calculaTiempo(){
         9,     // portal 5  5A -
         1,     // portal 6  1A -
         9,     // portal 7  5A -
-        8,     // portal 8  4B -
-        12,    // portal 9  AticoB -
-        1,     // portal 10 1A (presidente) -
-        8      // portal 11 4B
+        8,     // portal 8  4B -               ÑAPA TODO
+        10,    // portal 9  AticoB -           ÑAPA TODO
+        1,     // portal 10 1A (presidente) -  ÑAPA TODO
+        8      // portal 11 4B                 ÑAPA TODO
         ]
         var filas = []
         for (var i = añoActual; i < 2140; i++) {
