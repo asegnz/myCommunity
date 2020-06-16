@@ -9,36 +9,37 @@ function calculaTiempo(){
         // 2 y el 7 tienen atico A pero no atico B
 
         var propietarios = [
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 1
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 2
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 3
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],    // portal 4
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],    // portal 5
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 6
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],        // portal 7
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 8
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 9
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],           // portal 10
+            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]            // portal 11
         ];
         // datos de 2020
         var añoActual = 2020
         var portalPresidente = 10;
         var portalVicePresidente = 1;
+        var mesCargo = 'enero del '
 
         // TODO: se debe hacer una conversión del option de entrada a la matriz de propietarios
         var vocales = [
-        11,    // portal 1
-        5,     // portal 2
-        7,     // portal 3  (desconocido, de momento)
-        7,     // portal 4  (desconocido, de momento)
-        9,     // portal 5
-        7,     // portal 6  (desconocido, de momento)
-        7,     // portal 7  (desconocido, de momento)
-        7,     // portal 8  (desconocido, de momento)
-        3,     // portal 9  (desconocido, de momento)
-        1,     // portal 10 (desconocido, de momento)
-        3      // portal 11  (desconocido, de momento)
+        11,    // portal 1  AticoA (vicepresidente) -
+        5,     // portal 2  3A -
+        11,    // portal 3  AticoA -
+        12,    // portal 4  AticoB -
+        9,     // portal 5  5A -
+        1,     // portal 6  1A -
+        9,     // portal 7  5A -
+        8,     // portal 8  4B -
+        12,    // portal 9  AticoB -
+        1,     // portal 10 1A (presidente) -
+        8      // portal 11 4B
         ]
         var filas = []
         for (var i = añoActual; i < 2140; i++) {
@@ -73,7 +74,7 @@ function calculaTiempo(){
         var t = "";
         for (var i = 0; i < filas.length; i++){
               var tr = "<tr class='toRemove'>";
-              tr += "<td>"+filas[i].año+"</td>";
+              tr += "<td>"+mesCargo+filas[i].año+"</td>";
               tr += "<td>"+filas[i].rango+"</td>";
               tr += "</tr>";
               t += tr;
