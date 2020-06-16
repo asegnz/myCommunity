@@ -1,2 +1,6 @@
-# myCommunity
-Just another sample of Javascript project in order to know which year we have to be a president or vice president of our community
+# myCommunity webpage
+## Introducción
+Página web estática para conocer de forma simple cuándo debemos ejercer de vocal, de vicepresidente o de presidente.
+
+## Cómo accedo
+Puedes acceder a través del siguiente [enlace](https://asegnz.github.io/myCommunity). ¡Mucha suerte!
