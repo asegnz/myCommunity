@@ -1,119 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="scripts.js"></script>
 <head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        table.center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Tu comunidad</title>
 </head>
-<script type="text/javascript">
-    function calculaTiempo()
-    {
-        var e = document.getElementById("portal");
-        var portal = e.options[e.selectedIndex].value;
-        e = document.getElementById("piso");
-        var piso = e.options[e.selectedIndex].value;
 
-        var propietarios = [
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12],
-            [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]
-        ];
-        // datos 2020
-        var portalPresidente = 10;
-        var portalVicePresidente = 1;
-        // Ojo, los vocales colocar el orden de la lista de propietarios, no el número como tal
-        // que viene desde el option
-        var vocales = [
-        11,    // 1
-        5,    // 2
-        7,    // 3  (desconocido, de momento)
-        7,    // 4  (desconocido, de momento)
-        9,    // 5  
-        7,    // 6  (desconocido, de momento)
-        7,    // 7  (desconocido, de momento)
-        7,    // 8  (desconocido, de momento)
-        3,    // 9  (desconocido, de momento)
-        1,    // 10 (desconocido, de momento)
-        3    // 11  (desconocido, de momento)
-        ]
-        var añoActual = 2020
-        for (var i = añoActual; i < 2140; i++) {
-            if (vocales[portal-1] == propietarios[portal-1][piso-1]) {
-                if (portalPresidente == (portal)) {
-                    alert("En enero "+i+" eres presidente, enhorabuena!")
-                }
-                else if (portalVicePresidente == (portal)) {
-                    alert("En enero "+i+" eres vicepresidente, enhorabuena!")
-                }
-                else {
-                    alert("En enero "+i+" eres vocal, enhorabuena!")
-                }
-            }
-            // Actualizamos +1 a los portales de presi y vicepresi
-            portalPresidente = (portalPresidente % 11) + 1;
-            portalVicePresidente = (portalVicePresidente % 11) + 1;
-            for (var p = 0; p < vocales.length; p++) {
-                var vocalActual = vocales[p];
-                if (propietarios[p].length > vocalActual) {
-                    // actualizamos el vocal (+1
-                    vocales[p] = propietarios[p][vocalActual];
-                }
-                else {
-                    // volvemos a empezar por el principio
-                    vocales[p] = propietarios[p][0];
-                }
-            }
-        }
-    }
-</script>
-    
 <body>
-<h1>Elige tu portal:</h1>
-<select id="portal">
-    <option value="1" selected>Portal 1</option>
-    <option value="2">Portal 2</option>
-    <option value="3">Portal 3</option>
-    <option value="4">Portal 4</option>
-    <option value="5">Portal 5</option>
-    <option value="6">Portal 6</option>
-    <option value="7">Portal 7</option>
-    <option value="8">Portal 8</option>
-    <option value="9">Portal 9</option>
-    <option value="10">Portal 10</option>
-    <option value="11">Portal 11</option>
-</select><br>
-<h1>Elige tu piso:</h1>
-<select id="piso">
-    <option value="1" selected>PrimeroA</option>
-    <option value="2">PrimeroB</option>
-    <option value="3">SegundoA</option>
-    <option value="4">SegundoB</option>
-    <option value="5">TerceroA</option>
-    <option value="6">TerceroB</option>
-    <option value="7">CuartoA</option>
-    <option value="8">CuartoB</option>
-    <option value="9">QuintoA</option>
-    <option value="10">QuintoB</option>
-    <option value="11">AticoA</option>
-    <option value="12">AticoB</option>
-</select>
-
+<div style="text-align: center; display:inline-block">
+    <h1>Elige tu portal:</h1>
+    <select id="portal">
+        <option value="1" selected>Portal 1</option>
+        <option value="2">Portal 2</option>
+        <option value="3">Portal 3</option>
+        <option value="4">Portal 4</option>
+        <option value="5">Portal 5</option>
+        <option value="6">Portal 6</option>
+        <option value="7">Portal 7</option>
+        <option value="8">Portal 8</option>
+        <option value="9">Portal 9</option>
+        <option value="10">Portal 10</option>
+        <option value="11">Portal 11</option>
+    </select><br>
+    <h1>Elige tu piso:</h1>
+    <select id="piso">
+        <option value="1" selected>PrimeroA</option>
+        <option value="2">PrimeroB</option>
+        <option value="3">SegundoA</option>
+        <option value="4">SegundoB</option>
+        <option value="5">TerceroA</option>
+        <option value="6">TerceroB</option>
+        <option value="7">CuartoA</option>
+        <option value="8">CuartoB</option>
+        <option value="9">QuintoA</option>
+        <option value="10">QuintoB</option>
+        <option value="11">AticoA</option>
+        <option value="12">AticoB</option>
+    </select>
+    <br>
+    <br>
+    <button id="calcula" onclick="calculaTiempo()">Calcula cuándo te tocará</button>
 <br>
 <br>
-
-<button id="calcula" onclick="calculaTiempo()">Calcula cuándo te tocará</button>
+<table class="center">
+    <tbody id="puestos">
+    <tr>
+        <th id="año">Año</th>
+        <th id="rango">Rango</th>
+    </tr>
+    <tr class='toRemove'>
+        <td>Vacío</td>
+        <td>Vacío</td>
+    </tr>
+    <!-- Vacío por defecto -->
+    </tbody>
+</table>
+</div>
 </body>
 </html>
 
 
-<!--
-4 5 6 12 vecinos por portal
-2 y el 7 tienen atico A pero no atico B
- -->
